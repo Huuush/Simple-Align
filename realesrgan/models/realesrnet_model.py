@@ -182,7 +182,7 @@ class RealESRNetModel(SRModel):
             self.gt, self.lq = paired_random_crop(self.gt, self.lq, gt_size, self.opt['scale'])
 
             # training pair pool
-            self._dequeue_and_enqueue()
+            # self._dequeue_and_enqueue()
         else:
             self.lq = data['lq'].to(self.device)
             if 'gt' in data:
